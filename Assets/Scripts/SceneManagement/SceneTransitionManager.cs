@@ -38,4 +38,24 @@ public class SceneTransitionManager : Singleton<SceneTransitionManager>
                 fadeImage.gameObject.SetActive(false);
             });
     }
+
+
+    public void Load(SceneEnum sceneEnum)
+    {
+        DOTween.Sequence()
+            .OnStart(() =>
+            {
+                fadeImage.gameObject.SetActive(true);
+                fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 0);
+            })
+            .AppendInterval(0.05f)
+            .Append(fadeImage.DOFade(1, .2f))
+            .AppendCallback(() => SceneManager.LoadScene(SceneInfo.GetSceneName(sceneEnum)))
+            .AppendInterval(0.2f)
+            .Append(fadeImage.DOFade(0, .2f))
+            .OnComplete(() =>
+            {
+                fadeImage.gameObject.SetActive(false);
+            });
+    }
 }

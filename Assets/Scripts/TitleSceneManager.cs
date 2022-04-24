@@ -6,6 +6,6 @@ public class TitleSceneManager : MonoBehaviour
 {
     public void OnStartButton()
     {
-        SceneTransitionManager.I.Load("GameScene");
+        SceneTransitionManager.I.Load(SceneEnum.GameScene);
     }
 }
