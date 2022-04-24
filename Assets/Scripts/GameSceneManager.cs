@@ -8,4 +8,9 @@ public class GameSceneManager : MonoBehaviour
     {
         SceneTransitionManager.I.Load(SceneEnum.TitleScene);
     }
+
+    public void OnToStageButton(int number)
+    {
+        SceneTransitionManager.I.Load(SceneGroupEnum.Stages, number);
+    }
 }

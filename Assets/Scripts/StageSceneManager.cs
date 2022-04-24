@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleSceneManager : MonoBehaviour
+public class StageSceneManager : MonoBehaviour
 {
-    public void OnStartButton()
+    public void OnToStageSelectButton()
     {
         SceneTransitionManager.I.Load(SceneEnum.StageSelect);
     }

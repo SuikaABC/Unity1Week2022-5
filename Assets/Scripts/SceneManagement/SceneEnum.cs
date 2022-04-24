@@ -5,19 +5,33 @@ using UnityEngine;
 public enum SceneEnum
 {
     TitleScene,
-    GameScene
+    StageSelect
+}
+
+public enum SceneGroupEnum
+{
+    Stages
 }
 
 public static class SceneInfo
 {
     private static Dictionary<SceneEnum, string> SceneNames = new Dictionary<SceneEnum, string>()
     {
-        { SceneEnum.GameScene, "GameScene" },
+        { SceneEnum.StageSelect, "StageSelect" },
         { SceneEnum.TitleScene, "TitleScene" }
+    };
+
+    private static Dictionary<SceneGroupEnum, string> StageNames = new Dictionary<SceneGroupEnum, string>()
+    {
+        { SceneGroupEnum.Stages, "Stage" },
     };
 
     public static string GetSceneName(SceneEnum sceneEnum)
     {
         return SceneNames[sceneEnum];
+    }
+    public static string GetSceneNameFromGroup(SceneGroupEnum stageSceneEnum, int number)
+    {
+        return StageNames[stageSceneEnum] + number.ToString();
     }
 }
