@@ -50,7 +50,7 @@ public class SceneTransitionManager : Singleton<SceneTransitionManager>
             })
             .AppendInterval(0.05f)
             .Append(fadeImage.DOFade(1, .2f))
-            .AppendCallback(() => SceneManager.LoadScene(SceneInfo.GetSceneName(sceneEnum)))
+            .AppendCallback(() => SceneManager.LoadScene(SceneCollectionInfo.GetSceneName(sceneEnum)))
             .AppendInterval(0.2f)
             .Append(fadeImage.DOFade(0, .2f))
             .OnComplete(() =>
@@ -69,7 +69,7 @@ public class SceneTransitionManager : Singleton<SceneTransitionManager>
             })
             .AppendInterval(0.05f)
             .Append(fadeImage.DOFade(1, .2f))
-            .AppendCallback(() => SceneManager.LoadScene(SceneInfo.GetSceneNameFromGroup(stageEnum, number)))
+            .AppendCallback(() => SceneManager.LoadScene(SceneCollectionInfo.GetSceneNameFromGroup(stageEnum, number)))
             .AppendInterval(0.2f)
             .Append(fadeImage.DOFade(0, .2f))
             .OnComplete(() =>

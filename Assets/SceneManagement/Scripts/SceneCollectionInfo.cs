@@ -13,7 +13,7 @@ public enum SceneGroupEnum
     Stages
 }
 
-public static class SceneInfo
+public static class SceneCollectionInfo
 {
     private static Dictionary<SceneEnum, string> SceneNames = new Dictionary<SceneEnum, string>()
     {
