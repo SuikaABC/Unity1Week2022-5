@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6034776340406990902}
-  - component: {fileID: 6034776340406990903}
+  - component: {fileID: 7280603119855256292}
   m_Layer: 0
   m_Name: SceneTransitionManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6034776340406990903
+--- !u!114 &7280603119855256292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6034776340406990900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0f6f149a30334b859b26368bfb35151, type: 3}
+  m_Script: {fileID: 11500000, guid: 781c72e435745462cba473cb0d8cd68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 6034776341504698929}
